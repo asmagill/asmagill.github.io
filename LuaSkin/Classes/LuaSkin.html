@@ -1,0 +1,3662 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>LuaSkin Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">LuaSkin </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Hammerspoon</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/L">L</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/classLogAtLevel:withMessage:">+ classLogAtLevel:withMessage:</option>
+		
+		<option value="//api/name/logBreadcrumb:">+ logBreadcrumb:</option>
+		
+		<option value="//api/name/logDebug:">+ logDebug:</option>
+		
+		<option value="//api/name/logError:">+ logError:</option>
+		
+		<option value="//api/name/logInfo:">+ logInfo:</option>
+		
+		<option value="//api/name/logVerbose:">+ logVerbose:</option>
+		
+		<option value="//api/name/logWarn:">+ logWarn:</option>
+		
+		<option value="//api/name/shared">+ shared</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/checkArgs:">- checkArgs:</option>
+		
+		<option value="//api/name/countNatIndex:">- countNatIndex:</option>
+		
+		<option value="//api/name/createLuaState">- createLuaState</option>
+		
+		<option value="//api/name/destroyLuaState">- destroyLuaState</option>
+		
+		<option value="//api/name/getValidUTF8AtIndex:">- getValidUTF8AtIndex:</option>
+		
+		<option value="//api/name/init">- init</option>
+		
+		<option value="//api/name/isValidUTF8AtIndex:">- isValidUTF8AtIndex:</option>
+		
+		<option value="//api/name/logAtLevel:withMessage:">- logAtLevel:withMessage:</option>
+		
+		<option value="//api/name/logAtLevel:withMessage:fromStackPos:">- logAtLevel:withMessage:fromStackPos:</option>
+		
+		<option value="//api/name/logBreadcrumb:">- logBreadcrumb:</option>
+		
+		<option value="//api/name/logDebug:">- logDebug:</option>
+		
+		<option value="//api/name/logError:">- logError:</option>
+		
+		<option value="//api/name/logInfo:">- logInfo:</option>
+		
+		<option value="//api/name/logVerbose:">- logVerbose:</option>
+		
+		<option value="//api/name/logWarn:">- logWarn:</option>
+		
+		<option value="//api/name/luaObjectAtIndex:toClass:">- luaObjectAtIndex:toClass:</option>
+		
+		<option value="//api/name/luaRef:">- luaRef:</option>
+		
+		<option value="//api/name/luaRef:atIndex:">- luaRef:atIndex:</option>
+		
+		<option value="//api/name/luaTypeAtIndex:">- luaTypeAtIndex:</option>
+		
+		<option value="//api/name/luaUnref:ref:">- luaUnref:ref:</option>
+		
+		<option value="//api/name/maxNatIndex:">- maxNatIndex:</option>
+		
+		<option value="//api/name/protectedCallAndTraceback:nresults:">- protectedCallAndTraceback:nresults:</option>
+		
+		<option value="//api/name/pushLuaRef:ref:">- pushLuaRef:ref:</option>
+		
+		<option value="//api/name/pushNSObject:">- pushNSObject:</option>
+		
+		<option value="//api/name/pushNSObject:withOptions:">- pushNSObject:withOptions:</option>
+		
+		<option value="//api/name/pushNSPoint:">- pushNSPoint:</option>
+		
+		<option value="//api/name/pushNSRect:">- pushNSRect:</option>
+		
+		<option value="//api/name/pushNSSize:">- pushNSSize:</option>
+		
+		<option value="//api/name/registerLibrary:metaFunctions:">- registerLibrary:metaFunctions:</option>
+		
+		<option value="//api/name/registerLibraryWithObject:functions:metaFunctions:objectFunctions:">- registerLibraryWithObject:functions:metaFunctions:objectFunctions:</option>
+		
+		<option value="//api/name/registerLuaObjectHelper:forClass:">- registerLuaObjectHelper:forClass:</option>
+		
+		<option value="//api/name/registerLuaObjectHelper:forClass:withTableMapping:">- registerLuaObjectHelper:forClass:withTableMapping:</option>
+		
+		<option value="//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:">- registerLuaObjectHelper:forClass:withUserdataMapping:</option>
+		
+		<option value="//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:">- registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:</option>
+		
+		<option value="//api/name/registerObject:objectFunctions:">- registerObject:objectFunctions:</option>
+		
+		<option value="//api/name/registerPushNSHelper:forClass:">- registerPushNSHelper:forClass:</option>
+		
+		<option value="//api/name/requireModule:">- requireModule:</option>
+		
+		<option value="//api/name/resetLuaState">- resetLuaState</option>
+		
+		<option value="//api/name/tableToPointAtIndex:">- tableToPointAtIndex:</option>
+		
+		<option value="//api/name/tableToRectAtIndex:">- tableToRectAtIndex:</option>
+		
+		<option value="//api/name/tableToSizeAtIndex:">- tableToSizeAtIndex:</option>
+		
+		<option value="//api/name/toNSObjectAtIndex:">- toNSObjectAtIndex:</option>
+		
+		<option value="//api/name/toNSObjectAtIndex:withOptions:">- toNSObjectAtIndex:withOptions:</option>
+		
+		<option value="//api/name/tracebackWithTag:fromStackPos:">- tracebackWithTag:fromStackPos:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">LuaSkin Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>Skin.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>@class LuaSkin</p><p>LuaSkin was written for Hammerspoon (although it does not depend on any Hammerspoon functionality) to simplify our use of Lua. It includes a full, unmodified Lua distirbution, and provides an Objective C class that is capable of performing common operations such as creating/destroing a lua_State object, providing <a href="#//api/name/shared">shared</a> access to the object, Lua function argument type checking and bi-directional conversion of Lua objects and NSObject objects (with loadable plugins for your own converters)</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id delegate</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/L" title="L"></a>
+	<h3 class="method-title"><code><a href="#//api/name/L">&nbsp;&nbsp;L</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>LuaSkin&rsquo;s internal Lua state object</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (atomic, readonly) lua_State *L</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>@property L</p><p>Provides access to the raw Lua state object. Care should be taken when using this object, to ensure you are interacting with the Lua stack in a way that makes sense</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shared" title="shared"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shared">+&nbsp;shared</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the singleton LuaSkin.Skin object</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)shared</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Shared instance of LuaSkin.Skin</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="method-title"><code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initialises a LuaSkin object</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)init</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialised LuaSkin.Skin object</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Typically you are unlikely to want to use the alloc/init pattern. Instead, see @link <a href="#//api/name/shared">shared</a> @/link for getting the singleton object. You should only call alloc/init directly if you need to manage multiple Lua environments</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createLuaState" title="createLuaState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createLuaState">&ndash;&nbsp;createLuaState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Prepares the Lua environment in the LuaSkin object</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createLuaState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method should only ever be called after an explicit call to <a href="#//api/name/destroyLuaState">destroyLuaState</a>.
+There is no need to call it when initialising a LuaSkin instance</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/destroyLuaState" title="destroyLuaState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/destroyLuaState">&ndash;&nbsp;destroyLuaState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Destroys the Lua environment in the LuaSkin object</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)destroyLuaState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetLuaState" title="resetLuaState"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetLuaState">&ndash;&nbsp;resetLuaState</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Recreates the Lua environment in the LuaSkin object, from scratch</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resetLuaState</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/protectedCallAndTraceback:nresults:" title="protectedCallAndTraceback:nresults:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/protectedCallAndTraceback:nresults:">&ndash;&nbsp;protectedCallAndTraceback:nresults:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Calls lua_pcall() with debug.traceback() as the message handler</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)protectedCallAndTraceback:(int)<em>nargs</em> nresults:(int)<em>nresults</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>nargs</code></th>
+						<td><p>An integer specifying how many function arguments you have pushed onto the stack</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>nresults</code></th>
+						<td><p>An integer specifying how many return values the Lua function will push onto the stack</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>NO if the Lua code threw an exception, otherwise YES</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Here is some sample code:</p>
+
+<pre>@textblock
+// First push a reference to the Lua function you want to call
+lua_rawgeti([L](#//api/name/L), LUA_REGISTRYINDEX, fnRef);
+
+// Then push the parameters for that function, in order
+lua_pushnumber([L](#//api/name/L), 1);
+
+// Finally, call protectedCallAndTraceback, telling it how
+// many arguments you pushed, and how many results you expect
+BOO[L](#//api/name/L) result = [luaSkin protectedCallAndTraceback:1 nresults:0];
+
+// The boolean return tells you whether the Lua code threw
+// an exception or not
+if (!result) handleSomeError();
+@/textblock</pre>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLibrary:metaFunctions:" title="registerLibrary:metaFunctions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLibrary:metaFunctions:">&ndash;&nbsp;registerLibrary:metaFunctions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines a Lua library and creates a references table for the library</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)registerLibrary:(const luaL_Reg *)<em>functions</em> metaFunctions:(const luaL_Reg *)<em>metaFunctions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>functions</code></th>
+						<td><ul>
+<li>A static array of mappings between Lua function names and C function pointers. This provides the public API of the Lua library</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>metaFunctions</code></th>
+						<td><ul>
+<li>A static array of mappings between special meta Lua function names (such as <tt>__gc</tt>) and C function pointers</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A Lua reference to the table created for this library to store its own references</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Lua libraries defined in C are simple mappings between Lua function names and C function pointers.</p>
+
+<p>A library consists of a series of Lua functions that are exposed to the user, and (optionally) several special Lua functions that will be used by Lua itself. The most common of these is <tt><strong>gc</tt> which will be called when Lua is performing garbage collection for the library.
+These &ldquo;special&rdquo; functions are stored in the library&rsquo;s metatable. Other common metatable functions include <tt></strong>tostring</tt> and <tt>__index</tt>.</p>
+
+<p>The mapping between Lua functions and C functions is done using an array of type <tt>luaL_Reg</tt></p>
+
+<p>Every C function pointed to in a <tt>luaL_Reg</tt> array must have the signature: <tt>static int someFunction(lua_State *<a href="#//api/name/L">L</a>);</tt></p>
+
+<p>Here is some sample code:</p>
+
+<pre>@textblock
+static const luaL_Reg myShinyLibrary[] = {
+    {"doThing", function_doThing},
+    {NUL[L](#//api/name/L), NULL} // Library arrays must always end with this
+};
+
+static const luaL_Reg myShinyMetaLibrary[] = {
+    {"__gc", function_doLibraryCleanup},
+    {NUL[L](#//api/name/L), NULL} // Library arrays must always end with this
+};
+
+[luaSkin registerLibrary:myShinyLibrary metaFunctions:myShinyMetaLibrary];
+@/textblock</pre>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLibraryWithObject:functions:metaFunctions:objectFunctions:" title="registerLibraryWithObject:functions:metaFunctions:objectFunctions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLibraryWithObject:functions:metaFunctions:objectFunctions:">&ndash;&nbsp;registerLibraryWithObject:functions:metaFunctions:objectFunctions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines a Lua library that creates objects, which have methods</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)registerLibraryWithObject:(const char *)<em>libraryName</em> functions:(const luaL_Reg *)<em>functions</em> metaFunctions:(const luaL_Reg *)<em>metaFunctions</em> objectFunctions:(const luaL_Reg *)<em>objectFunctions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>libraryName</code></th>
+						<td><ul>
+<li>A C string containing the name of this library</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>functions</code></th>
+						<td><ul>
+<li>A static array of mappings between Lua function names and C function pointers. This provides the public API of the Lua library</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>metaFunctions</code></th>
+						<td><ul>
+<li>A static array of mappings between special meta Lua function names (such as &ldquo;__gc&rdquo;) and C function pointers</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectFunctions</code></th>
+						<td><ul>
+<li>A static array of mappings between Lua object method names and C function pointers. This provides the public API of objects created by this library. Note that this object is also used as the metatable, so special functions (e.g. &ldquo;__gc&rdquo;) should be included here</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A Lua reference to the table created for this library to store its own references</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Here is some sample code:</p>
+
+<pre>@textblock
+char *libraryName = "shinyLibrary";
+
+static const lua[L](#//api/name/L)_Reg myShinyLibrary[] = {
+    {"newObject", function_createObject},
+    {NUL[L](#//api/name/L), NULL} // Library arrays must always end with this
+};
+
+static const lua[L](#//api/name/L)_Reg myShinyMetaLibrary[] = {
+    {"__gc", function_doLibraryCleanup},
+    {NUL[L](#//api/name/L), NULL} // Library arrays must always end with this
+};
+
+static const lua[L](#//api/name/L)_Reg myShinyObjectLibrary[] = {
+    {"doThing", function_objectDoThing},
+    {"__gc", function_doObjectCleanup},
+    {NUL[L](#//api/name/L), NULL} // Library arrays must always end with this
+};
+
+[luaSkin registerLibraryWithObject:libraryName functions:myShinyLibrary metaFunctions:myShinyMetaLibrary libraryObjectFunctions:myShinyObjectLibrary];
+@/textblock</pre>
+<div class="warning"><p><strong>Warning:</strong> Every C function pointer must point to a function of the form: static int someFunction(lua_State *<a href="#//api/name/L">L</a>);</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerObject:objectFunctions:" title="registerObject:objectFunctions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerObject:objectFunctions:">&ndash;&nbsp;registerObject:objectFunctions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines a Lua object with methods</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerObject:(const char *)<em>objectName</em> objectFunctions:(const luaL_Reg *)<em>objectFunctions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectName</code></th>
+						<td><ul>
+<li>A C string containing the name of this object</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectFunctions</code></th>
+						<td><ul>
+<li>A static array of mappings between Lua object method names and C function pointers. This provides the public API of the objects. Note that this array is also used as the metatable, so special functions (e.g. &ldquo;__gc&rdquo;) should be included here</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Here is some sample code:
+@code
+char *objectName = &ldquo;shinyObject&rdquo;;</p>
+
+<p>static const lua<a href="#//api/name/L">L</a>_Reg myShinyObject[] = {
+    {&ldquo;doThing&rdquo;, function_objectDoThing},
+    {&ldquo;__gc&rdquo;, function_objectCleanup},
+    {NUL<a href="#//api/name/L">L</a>, NULL} // Function arrays must always end with this
+};</p>
+
+<p>[luaSkin registerObject:objectName objectFunctions:myShinyObject];
+@endcode</p><div class="warning"><p><strong>Warning:</strong> Every C function pointer must point to a function of the form: static int someFunction(lua_State *<a href="#//api/name/L">L</a>);</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/luaRef:" title="luaRef:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/luaRef:">&ndash;&nbsp;luaRef:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stores a reference to the object at the top of the Lua stack, in the supplied table, and pops the object off the stack
+@remark This method is functionally analogous to luaL_ref(), it just takes care of pushing the supplied table ref onto the stack, and removes it afterwards</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)luaRef:(int)<em>refTable</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTable</code></th>
+						<td><ul>
+<li>An integer reference to a table (e.g. the result of a previous luaRef on a table object)</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An integer reference to the object that was at the top of the stack</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/luaRef:atIndex:" title="luaRef:atIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/luaRef:atIndex:">&ndash;&nbsp;luaRef:atIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stores a reference to the object at the specified position of the Lua stack, in the supplied table, without removing the object from the stack</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)luaRef:(int)<em>refTable</em> atIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTable</code></th>
+						<td><ul>
+<li>An integer reference to a table (e.h. the result of a previous luaRef on a table object)</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><ul>
+<li>An integer stack position</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An integer reference to the object at the specified stack position</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/luaUnref:ref:" title="luaUnref:ref:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/luaUnref:ref:">&ndash;&nbsp;luaUnref:ref:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes a reference from the supplied table</p>
+
+<p>@remark This method is functionally analogous to luaL_unref(), it just takes care of pushing the supplied table ref onto the Lua stack, and removes it afterwards</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)luaUnref:(int)<em>refTable</em> ref:(int)<em>ref</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTable</code></th>
+						<td><ul>
+<li>An integer reference to a table (e.g the result of a previous luaRef on a table object)</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ref</code></th>
+						<td><ul>
+<li>An integer reference for an object that should be removed from the refTable table</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An integer, always LUA_NOREF (you are advised to store this value in the variable containing the ref parameter, so it does not become a stale reference)</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushLuaRef:ref:" title="pushLuaRef:ref:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushLuaRef:ref:">&ndash;&nbsp;pushLuaRef:ref:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pushes a stored reference onto the Lua stack</p>
+
+<p>@remark This method is functionally analogous to lua_rawgeti(), it just takes care of pushing the supplied table ref onto the Lua stack, and removes it afterwards</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushLuaRef:(int)<em>refTable</em> ref:(int)<em>ref</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>refTable</code></th>
+						<td><ul>
+<li>An integer reference to a table (e.h. the result of a previous luaRef on a table object)</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ref</code></th>
+						<td><ul>
+<li>An integer reference for an object that should be pushed onto the stack</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An integer containing the Lua type of the object pushed onto the stack</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/checkArgs:" title="checkArgs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkArgs:">&ndash;&nbsp;checkArgs:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Ensures a Lua->C call has the right arguments</p>
+
+<p>@remark If the arguments are incorrect, this call will never return and the user will get a nice Lua traceback instead</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)checkArgs:(int)<em>firstArg</em>, <em>...</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>firstArg</code></th>
+						<td><ul>
+<li>An integer that defines the first acceptable Lua argument type. Possible values are LS_TNI<a href="#//api/name/L">L</a>, LS_TBOOLEAN, LS_TNUMBER, LS_TSTRING, LS_TTABLE, LS_TFUNCTION, LS_TUSERDATA, LS_TBREAK. Followed by zero or more integers of the same possible values. The final value MUST be LS_TBREAK</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Each argument can use boolean OR&rsquo;s to allow multiple types to be accepted (e.g. LS_TNI<a href="#//api/name/L">L</a> | LS_TBOOLEAN).</p>
+
+<p>Each argument can be OR&rsquo;d with LS_TOPTIONA<a href="#//api/name/L">L</a> to indicate that the argument is optional.</p>
+
+<p>LS_TUSERDATA arguments should be followed by a string containing the metatable tag name (e.g. &ldquo;hs.screen&rdquo; for objects from hs.screen).</p><div class="warning"><p><strong>Warning:</strong> The final argument MUST be LS_TBREAK, to signal the end of the list</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/luaTypeAtIndex:" title="luaTypeAtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/luaTypeAtIndex:">&ndash;&nbsp;luaTypeAtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the effective Lua type for the item at the specified stack index.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)luaTypeAtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the data to return a type for</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An integer which will be one of the following: LUA_TNI<a href="#//api/name/L">L</a>, LUA_TNUMBER, LUA_TBOOLEAN, LUA_TSTRING, LUA_TTABLE, LUA_TFUNCTION, LUA_TUSERDATA, LUA_TTHREAD, or LUA_TLIGHTUSERDATA.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method returns the Lua type for the item at the specified index.</p>
+
+<p>At present, the only difference between this and the Lua API function <code>lua_type</code> is that a table with a __call metamethod is considered a function and will return LUA_TFUNCTION, since <a href="#//api/name/protectedCallAndTraceback:nresults:">[LuaSkin protectedCallAndTraceback:nresults:]</a> can accept such a table as the function to invoke.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushNSObject:" title="pushNSObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushNSObject:">&ndash;&nbsp;pushNSObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pushes an NSObject to the lua stack</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushNSObject:(id)<em>obj</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>obj</code></th>
+						<td><p>an NSObject</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of items pushed onto the lua stack - this will be 1 or 0, if conversion was not possible.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method takes an NSObject and checks its class against registered classes and then against the built in defaults to determine the best way to represent it in Lua.</p><p>This method is equivalent to invoking [LuaSkin pushNSObject:obj withOptions:LS_NSNone].  See @link <a href="#//api/name/pushNSObject:withOptions:">pushNSObject:withOptions:</a> @/link.</p>
+
+<p>The default classes are (in order): NSNull, NSNumber, NSValue, NSString, NSData, NSDate, NSArray, NSSet, NSOrderedSet, NSDictionary, NSUR<a href="#//api/name/L">L</a>, and NSObject.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushNSObject:withOptions:" title="pushNSObject:withOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushNSObject:withOptions:">&ndash;&nbsp;pushNSObject:withOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pushes an NSObject to the lua stack with the specified options</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushNSObject:(id)<em>obj</em> withOptions:(NSUInteger)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>obj</code></th>
+						<td><p>an NSObject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>options for the conversion made by using the bitwise OR operator with members of @link <a href="../Constants/LS_NSConversionOptions.html">LS_NSConversionOptions</a> @/link.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of items pushed onto the lua stack - this will be 1 or 0, if conversion was not possible.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method takes an NSObject and checks its class against registered classes and then against the built in defaults to determine the best way to represent it in Lua.</p>
+
+<p>@remark The default classes are (in order): NSNull, NSNumber, NSValue, NSString, NSData, NSDate, NSArray, NSSet, NSOrderedSet, NSDictionary, NSUR<a href="#//api/name/L">L</a>, and NSObject.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerPushNSHelper:forClass:" title="registerPushNSHelper:forClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerPushNSHelper:forClass:">&ndash;&nbsp;registerPushNSHelper:forClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a helper function for converting an NSObject to its lua equivalent</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)registerPushNSHelper:(pushNSHelperFunction)<em>helperFN</em> forClass:(const char *)<em>className</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>helperFN</code></th>
+						<td><p>a function of the type @link pushNSHelperFunction @/link</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type this function can convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if registration was successful, or False if the function was not registered for some reason, most commonly because the class already has a registered conversion function.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method allows registering a new NSObject class for conversion by allowing a module to register a helper function</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushNSRect:" title="pushNSRect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushNSRect:">&ndash;&nbsp;pushNSRect:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Push an NSRect onto the lua stack as a lua geometry object (table with x,y,h, and w keys)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushNSRect:(NSRect)<em>theRect</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theRect</code></th>
+						<td><p>the rectangle to push onto the lua stack</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of items on the lua stack - this is always 1 but is returned to simplify its use in Hammerspoon modules</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSRect is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushNSPoint:" title="pushNSPoint:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushNSPoint:">&ndash;&nbsp;pushNSPoint:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Push an NSPoint onto the lua stack as a lua geometry object (table with x and y keys)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushNSPoint:(NSPoint)<em>thePoint</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>thePoint</code></th>
+						<td><p>the point to push onto the lua stack</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of items on the lua stack - this is always 1 but is returned to simplify its use in Hammerspoon modules</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSPoint is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pushNSSize:" title="pushNSSize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pushNSSize:">&ndash;&nbsp;pushNSSize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Push an NSSize onto the lua stack as a lua geometry object (table with w and h keys)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)pushNSSize:(NSSize)<em>theSize</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theSize</code></th>
+						<td><p>the point to push onto the lua stack</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The number of items on the lua stack - this is always 1 but is returned to simplify its use in Hammerspoon modules</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSSize is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/toNSObjectAtIndex:" title="toNSObjectAtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/toNSObjectAtIndex:">&ndash;&nbsp;toNSObjectAtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Return an NSObject containing the best representation of the lua data structure at the specified index</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)toNSObjectAtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the data to convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSObject of the appropriate type or nil if conversion was not possible.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method takes a lua object specified at the provided index and converts it into one of the basic NSObject types.</p>
+
+<p>  Basic Lua type to NSObject conversion</p>
+
+<p>  nil     - nil if the index points directly to a nil lua object, or [NSNull null] if the nil is a member of a table</p>
+
+<p>  string  - NSString</p>
+
+<p>  number  - NSNumber numberWithInteger: or NSNumber numberWithDouble:</p>
+
+<p>  boolean - NSNumber numberWithBool:</p>
+
+<p>  table   - NSArray if table is non-sparse with only integer keys starting at 1 or NSDictionary otherwise</p>
+
+<p>  Userdata types and typed tables (a lua table with a __luaSkinType key-value pair) will be converted to the appropriate Objective-C type if a module has registered a helper function for the specified type.</p>
+
+<p>@remark An empty table will be returned as an empty NSArray.</p>
+
+<p>@remark If the type is not in the above list, this method returns nil.</p><div class="warning"><p><strong>Warning:</strong> This method is equivalent to invoking [LuaSkin toNSObjectAtIndex:idx withOptions:LS_NSNone].  See @link <a href="#//api/name/toNSObjectAtIndex:withOptions:">toNSObjectAtIndex:withOptions:</a> @/link.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/toNSObjectAtIndex:withOptions:" title="toNSObjectAtIndex:withOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/toNSObjectAtIndex:withOptions:">&ndash;&nbsp;toNSObjectAtIndex:withOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Return an NSObject containing the best representation of the lua data structure at the specified index</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)toNSObjectAtIndex:(int)<em>idx</em> withOptions:(NSUInteger)<em>options</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the data to convert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>options for the conversion made by using the bitwise OR operator with members of @link <a href="../Constants/LS_NSConversionOptions.html">LS_NSConversionOptions</a> @/link.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSObject of the appropriate type or nil if conversion was not possible.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method takes a lua object specified at the provided index and converts it into one of the basic NSObject types.</p>
+
+<p>  Basic Lua type to NSObject conversion rules:</p>
+
+<p>  nil     - nil if the index points directly to a nil lua object, or [NSNull null] if the nil is a member of a table</p>
+
+<p>  string  - NSString or NSData, depending upon options specified</p>
+
+<p>  number  - NSNumber numberWithInteger: or NSNumber numberWithDouble:</p>
+
+<p>  boolean - NSNumber numberWithBool:</p>
+
+<p>  table   - NSArray if table is non-sparse with only integer keys starting at 1 or NSDictionary otherwise</p>
+
+<p>  Userdata types and typed tables (a lua table with a __luaSkinType key-value pair) will be converted to the appropriate Objective-C type if a module has registered a helper function for the specified type.</p>
+
+<p>@remark An empty table will be returned as an empty NSArray.</p>
+
+<p>@remark If the type is not in the above list, this method will return nil for the entire conversion, or [NSNull null] or a description of the unrecognized type  for the data or sub-component depending upon the specified options.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/luaObjectAtIndex:toClass:" title="luaObjectAtIndex:toClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/luaObjectAtIndex:toClass:">&ndash;&nbsp;luaObjectAtIndex:toClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Return an NSObject containing the best representation of the lua table at the specified index</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)luaObjectAtIndex:(int)<em>idx</em> toClass:(const char *)<em>className</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the table to convert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type to return.  If no converter function is currently registered for this type, nil is returned</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSObject of the appropriate type depending upon the data on the lua stack and the functions currently registered</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method uses registered converter functions provided by the Hammerspoon modules to convert the specified table into a recognizable NSObject.  No converters are included within the LuaSkin.  This method relies upon functions registered with the <a href="#//api/name/registerLuaObjectHelper:forClass:">registerLuaObjectHelper:forClass:</a> method for the conversions</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLuaObjectHelper:forClass:" title="registerLuaObjectHelper:forClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLuaObjectHelper:forClass:">&ndash;&nbsp;registerLuaObjectHelper:forClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> conversion helper function for the specified class</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)registerLuaObjectHelper:(luaObjectHelperFunction)<em>helperFN</em> forClass:(const char *)<em>className</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>helperFN</code></th>
+						<td><p>a function of the type @link luaObjectHelperFunction @/link</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type this function can convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if registration was successful, or False if the function was not registered for some reason, most commonly because the class already has a registered conversion function.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method registers a converter function for use with the @link <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> @/link method for converting lua data types into NSObjects</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:" title="registerLuaObjectHelper:forClass:withUserdataMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:">&ndash;&nbsp;registerLuaObjectHelper:forClass:withUserdataMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> conversion helper function for the specified class and record a mapping between a userdata type and the class</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)registerLuaObjectHelper:(luaObjectHelperFunction)<em>helperFN</em> forClass:(const char *)<em>className</em> withUserdataMapping:(const char *)<em>userdataTag</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>helperFN</code></th>
+						<td><p>a function of the type @link luaObjectHelperFunction @/link</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type this function can convert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userdataTag</code></th>
+						<td><p>a C string containing the Lua userdata type that can be converted to an NSObject</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if registration was successful, or False if the function was not registered for some reason, most commonly because the class already has a registered conversion function.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method registers a converter function for use with the @link <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> @/link method for converting lua data types into NSObjects. It builds on @link <a href="#//api/name/registerLuaObjectHelper:forClass:">registerLuaObjectHelper:forClass:</a> @/link by also storing a mapping between the NSObject class and Lua userdata type so userdata objects of this type can be automatically converted with @link <a href="#//api/name/toNSObjectAtIndex:">toNSObjectAtIndex:</a> @/link and @link <a href="#//api/name/toNSObjectAtIndex:withOptions:">toNSObjectAtIndex:withOptions:</a> @/link as well.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:" title="registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:">&ndash;&nbsp;registerLuaObjectHelper:forClass:withUserdataMapping:andTableMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> conversion helper function for the specified class and record a mapping between a userdata type and the class</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)registerLuaObjectHelper:(luaObjectHelperFunction)<em>helperFN</em> forClass:(const char *)<em>className</em> withUserdataMapping:(const char *)<em>userdataTag</em> andTableMapping:(const char *)<em>tableTag</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>helperFN</code></th>
+						<td><p>a function of the type @link luaObjectHelperFunction @/link</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type this function can convert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userdataTag</code></th>
+						<td><p>a C string containing the Lua userdata type that can be converted to an NSObject</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tableTag</code></th>
+						<td><p>a C string containing the Lua table type specification that can be converted to an NSObject</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if registration was successful, or False if the function was not registered for some reason, most commonly because the class already has a registered conversion function.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method registers a converter function for use with the @link <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> @/link method for converting lua data types into NSObjects. It builds on @link <a href="#//api/name/registerLuaObjectHelper:forClass:">registerLuaObjectHelper:forClass:</a> @/link by also storing a mapping between the NSObject class and Lua userdata type or a Lua table with a type specification so that objects of either type can be automatically converted with @link <a href="#//api/name/toNSObjectAtIndex:">toNSObjectAtIndex:</a> @/link and @link <a href="#//api/name/toNSObjectAtIndex:withOptions:">toNSObjectAtIndex:withOptions:</a> @/link as well.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerLuaObjectHelper:forClass:withTableMapping:" title="registerLuaObjectHelper:forClass:withTableMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerLuaObjectHelper:forClass:withTableMapping:">&ndash;&nbsp;registerLuaObjectHelper:forClass:withTableMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Register a <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> conversion helper function for the specified class and record a mapping between a table type and the class</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)registerLuaObjectHelper:(luaObjectHelperFunction)<em>helperFN</em> forClass:(const char *)<em>className</em> withTableMapping:(const char *)<em>tableTag</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>helperFN</code></th>
+						<td><p>a function of the type @link luaObjectHelperFunction @/link</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>className</code></th>
+						<td><p>a C string containing the class name of the NSObject type this function can convert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tableTag</code></th>
+						<td><p>a C string containing the Lua table type specification that can be converted to an NSObject</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>True if registration was successful, or False if the function was not registered for some reason, most commonly because the class already has a registered conversion function.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method registers a converter function for use with the @link <a href="#//api/name/luaObjectAtIndex:toClass:">luaObjectAtIndex:toClass:</a> @/link method for converting lua data types into NSObjects. It builds on @link <a href="#//api/name/registerLuaObjectHelper:forClass:">registerLuaObjectHelper:forClass:</a> @/link by also storing a mapping between the NSObject class and a Lua table with a type specification so objects of this type can be automatically converted with @link <a href="#//api/name/toNSObjectAtIndex:">toNSObjectAtIndex:</a> @/link and @link <a href="#//api/name/toNSObjectAtIndex:withOptions:">toNSObjectAtIndex:withOptions:</a> @/link as well.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tableToRectAtIndex:" title="tableToRectAtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableToRectAtIndex:">&ndash;&nbsp;tableToRectAtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convert a lua geometry object (table with x,y,h, and w keys) into an NSRect</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSRect)tableToRectAtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the table to convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSRect created from the specified table</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSRect is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tableToPointAtIndex:" title="tableToPointAtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableToPointAtIndex:">&ndash;&nbsp;tableToPointAtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convert a lua geometry object (table with x and y keys) into an NSPoint</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSPoint)tableToPointAtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the table to convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSPoint created from the specified table</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSPoint is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tableToSizeAtIndex:" title="tableToSizeAtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tableToSizeAtIndex:">&ndash;&nbsp;tableToSizeAtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convert a lua geometry object (table with h and w keys) into an NSSize</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSSize)tableToSizeAtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the table to convert</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An NSSize created from the specified table</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This is included as a separate method because NSSize is a structure, not an NSObject</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isValidUTF8AtIndex:" title="isValidUTF8AtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isValidUTF8AtIndex:">&ndash;&nbsp;isValidUTF8AtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Determines if the string in the lua stack is valid UTF8 or not</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isValidUTF8AtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the string to check</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the string can be treated as a valid UTF8 string of characters or NO if it is not a string or if it contains invalid UTF8 byte sequences</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method is used internally to determine if a string should be treated as an NSString or an NSData object.  It is included as a public method because it has uses outside of this as well</p></div><div class="warning"><p><strong>Warning:</strong> This method uses lua_tolstring, which will convert a number on the stack to a string.  As described in the Lua documentation, this will causes problems if you&rsquo;re using lua_next with the same index location</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getValidUTF8AtIndex:" title="getValidUTF8AtIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getValidUTF8AtIndex:">&ndash;&nbsp;getValidUTF8AtIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an NSString for the string at the specified index with invalid UTF8 byte sequences converted to the Unicode Invalid Character code.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getValidUTF8AtIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the lua object</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The &ldquo;safe&rdquo; string as an NSString object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method uses lua<a href="#//api/name/L">L</a>_tolstring so __tostring metamethods will be used if the index does not refer to a string or a number.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/maxNatIndex:" title="maxNatIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxNatIndex:">&ndash;&nbsp;maxNatIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the largest integer key in the table at the specified index.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (lua_Integer)maxNatIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the lua table</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>a lua_Integer value containing the largest integer key in the table specified.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this number is equal to the number returned by @link <a href="#//api/name/countNatIndex:">countNatIndex:</a> @/link, then it is safe to infer that the table represents a non-sparse array of elements.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countNatIndex:" title="countNatIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countNatIndex:">&ndash;&nbsp;countNatIndex:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the number of keys in the table at the specified index.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (lua_Integer)countNatIndex:(int)<em>idx</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>idx</code></th>
+						<td><p>the index on lua stack which contains the lua table</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>a lua_Integer value representing the number of keys in the table specified.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method returns a count of keys of any type in the specified table.  Note that a table which contains an array has implicit integer indexes corresponding to the element&rsquo;s position in the array.  Because of this, you can compare the result of this method to @link <a href="#//api/name/maxNatIndex:">maxNatIndex:</a> @/link and if they are equal then it is safe to infer that the table represents a non-sparse array of elements.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requireModule:" title="requireModule:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requireModule:">&ndash;&nbsp;requireModule:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads a module and places its return value (usually a table of functions) on the stack</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)requireModule:(const char *)<em>moduleName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>moduleName</code></th>
+						<td><p>the name of the module to load</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the module loaded successfully or NO if it does not</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method performs the equivalent of the lua command <code>require(...)</code> and places the return value (usually a table of functions) on the stack, or an error string on the stack if it was unable to load the specified module</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logAtLevel:withMessage:" title="logAtLevel:withMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logAtLevel:withMessage:">&ndash;&nbsp;logAtLevel:withMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with at the specified level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logAtLevel:(int)<em>level</em> withMessage:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>level</code></th>
+						<td><p>The message log level as an integer.  Predefined levels are defined and used within LuaSkin itself as (in decreasing level of severity) @link LS_LOG_ERROR @/link, @link LS_LOG_WARN @/link, @link LS_LOG_INFO @/link, @link LS_LOG_DEBUG @/link, and @link LS_LOG_VERBOSE @/link.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logs the specified message at the specified level by invoking the <a href="#//api/name/delegate">delegate</a> method @link logForLuaSkinAtLevel:withMessage: @/link.</p><div class="warning"><p><strong>Warning:</strong> If no <a href="#//api/name/delegate">delegate</a> has been defined, messages are logged to the system console via NSLog.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logVerbose:" title="logVerbose:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logVerbose:">&ndash;&nbsp;logVerbose:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_VERBOSE level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logVerbose:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_VERBOSE @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logDebug:" title="logDebug:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logDebug:">&ndash;&nbsp;logDebug:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_DEBUG level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logDebug:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_DEBUG @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logInfo:" title="logInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logInfo:">&ndash;&nbsp;logInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_INFO level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logInfo:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_INFO @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logWarn:" title="logWarn:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logWarn:">&ndash;&nbsp;logWarn:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_WARN level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logWarn:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_WARN @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logError:" title="logError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logError:">&ndash;&nbsp;logError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_ERROR level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logError:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_ERROR @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logBreadcrumb:" title="logBreadcrumb:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logBreadcrumb:">&ndash;&nbsp;logBreadcrumb:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with LS_LOG_BREADCRUMB level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logBreadcrumb:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_BREADCRUMB @/link</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/classLogAtLevel:withMessage:" title="classLogAtLevel:withMessage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classLogAtLevel:withMessage:">+&nbsp;classLogAtLevel:withMessage:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (void)classLogAtLevel:(int)<em>level</em> withMessage:(NSString *)<em>theMessage</em></code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logVerbose:" title="logVerbose:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logVerbose:">+&nbsp;logVerbose:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_VERBOSE level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logVerbose:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_VERBOSE @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logDebug:" title="logDebug:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logDebug:">+&nbsp;logDebug:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_DEBUG level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logDebug:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_DEBUG @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logInfo:" title="logInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logInfo:">+&nbsp;logInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_INFO level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logInfo:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_INFO @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logWarn:" title="logWarn:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logWarn:">+&nbsp;logWarn:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_WARN level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logWarn:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_WARN @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logError:" title="logError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logError:">+&nbsp;logError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_ERROR level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logError:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_ERROR @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logBreadcrumb:" title="logBreadcrumb:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logBreadcrumb:">+&nbsp;logBreadcrumb:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message from any thread with LS_LOG_BREADCRUMB level</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)logBreadcrumb:(NSString *)<em>theMessage</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This class method is equivalent to invoking @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link with level @link LS_LOG_BREADCRUMB @/link, but is safe to use from any thread, not just the main application thread.  If this method is invoked from a thread other than the main thread, it uses dispatch_async to submit the logging message to the main thread for proper handling by the <a href="#//api/name/delegate">delegate</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/tracebackWithTag:fromStackPos:" title="tracebackWithTag:fromStackPos:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/tracebackWithTag:fromStackPos:">&ndash;&nbsp;tracebackWithTag:fromStackPos:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a string containing the current stack top, the absolute index position of the stack top, and the output from luaL_traceback.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)tracebackWithTag:(NSString *)<em>theTag</em> fromStackPos:(int)<em>level</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theTag</code></th>
+						<td><p>a message to attach to the top of the stack trace</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>level</code></th>
+						<td><ul>
+<li>the level at which to start the traceback</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>an NSString object containing the output generated.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> This method is primarily for debugging and may be removed in a future release.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/logAtLevel:withMessage:fromStackPos:" title="logAtLevel:withMessage:fromStackPos:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logAtLevel:withMessage:fromStackPos:">&ndash;&nbsp;logAtLevel:withMessage:fromStackPos:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Log the specified message with at the specified level with the traceback position prepended.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logAtLevel:(int)<em>level</em> withMessage:(NSString *)<em>theMessage</em> fromStackPos:(int)<em>pos</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>level</code></th>
+						<td><p>The message log level as an integer.  Predefined levels are defined and used within LuaSkin itself as (in decreasing level of severity) @link LS_LOG_ERROR @/link, @link LS_LOG_WARN @/link, @link LS_LOG_INFO @/link, @link LS_LOG_DEBUG @/link, and @link LS_LOG_VERBOSE @/link.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>theMessage</code></th>
+						<td><p>the message to log</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pos</code></th>
+						<td><p>the lua traceback level to attempt to retrieve the chunk name and line number from</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Logs the specified message, prepended with the lua chunk name and line number at the specified traceback level, for the specified level.  The log level and combined message is logged with @link <a href="#//api/name/logAtLevel:withMessage:">logAtLevel:withMessage:</a> @/link.</p><div class="warning"><p><strong>Warning:</strong> This method is primarily for testing and may be removed in a future release.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Skin.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Hammerspoon. All rights reserved. Updated: 2017-03-29</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
